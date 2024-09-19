@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
 }
@@ -88,16 +87,17 @@ body {
   }
 }
 
-/* visibility hidden means the item is still there and taking up space
-   but just not shown. display: none doesn't take up space */
-.hidden {
-  visibility: hidden;
-}
-
 .info-bar {
+  visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* visibility hidden means the item is still there and taking up space
+   but just not shown. display: none doesn't take up space */
+.show {
+  visibility: visible;
 }
 
 /* winner animation */
@@ -145,4 +145,3 @@ body {
 .winner {
   animation: rainbow 4s infinite linear;
 }
-
