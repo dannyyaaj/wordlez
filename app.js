@@ -135,7 +135,7 @@ async function start() {
   }
 
   function backspace() {
-    const lastIndex = (ANSWER_LENGTH * currentRow) + currentGuess.length
+    const lastIndex = (ANSWER_LENGTH * currentRow) + currentGuess.length - 1
     currentGuess = currentGuess.substring(0, currentGuess.length - 1)
     letters[lastIndex].innerText = ''
   }
