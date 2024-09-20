@@ -15,7 +15,6 @@ async function start() {
   const wordParts = word.split('')
   let done = false
   setLoading(false)
-  console.log(word, 'word')
   isLoading = false
 
   handleKeyPress()
