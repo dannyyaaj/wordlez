@@ -148,7 +148,7 @@ body {
 }
 
 #keyboard-cont {
-  margin: 1rem 0;
+  margin: 1rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,7 +165,7 @@ body {
 .keyboard-button {
   font-size: 1rem;
   font-weight: 700;
-  padding: 0.5rem;
+  padding: 0.25em;
   margin: 0 2px;
   cursor: pointer;
   text-transform: uppercase;
@@ -185,5 +185,9 @@ body {
     height: 45px;
     width: 45px;
     font-size: 30px;
+  }
+
+  .keyboard-button {
+    padding: 0.5em;
   }
 }
