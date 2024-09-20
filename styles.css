@@ -29,20 +29,21 @@ body {
   margin: 10px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  row-gap: 10px;
-  column-gap: 5px;
+  row-gap: 5px;
+  column-gap: 0;
 }
 
 .scoreboard-letter {
-  height: 45px;
-  width: 45px;
-  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  font-size: 1rem;
   text-transform: uppercase;
   border: 3px solid #ccc;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .correct {
@@ -144,4 +145,21 @@ body {
 
 .winner {
   animation: rainbow 4s infinite linear;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    width: 100vw;
+  }
+
+  .scoreboard {
+    row-gap: 10px;
+    column-gap: 5px;
+  }
+
+  .scoreboard-letter {
+    height: 45px;
+    width: 45px;
+    font-size: 30px;
+  }
 }
