@@ -24,9 +24,9 @@ body {
 }
 
 .scoreboard {
-  max-width: 300px;
+  max-width: 250px;
   width: 100%;
-  margin: 10px auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   row-gap: 5px;
@@ -172,14 +172,26 @@ body {
   text-transform: uppercase;
 }
 
+/* @media only screen and (min-width: 400px) {
+  .scoreboard {
+  }
+
+  .scoreboard-letter {
+  }
+
+  .keyboard-button {
+  }
+} */
+
 @media only screen and (min-width: 600px) {
   body {
     width: 100vw;
   }
 
   .scoreboard {
+    max-width: 300px;
+    margin: 10px auto;
     row-gap: 10px;
-    column-gap: 5px;
   }
 
   .scoreboard-letter {
