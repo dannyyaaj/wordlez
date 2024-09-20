@@ -7,6 +7,7 @@ const MAX_ROUNDS = 6
 async function start() {
   let currentGuess = ''
   let currentRow = 0
+  let previousRow = currentRow
   let isLoading = true
 
   const url = 'https://words.dev-apis.com/word-of-the-day?random=1'
@@ -135,9 +136,13 @@ async function start() {
   }
 
   function backspace() {
-    const lastIndex = (ANSWER_LENGTH * currentRow) + currentGuess.length - 1
-    currentGuess = currentGuess.substring(0, currentGuess.length - 1)
-    letters[lastIndex].innerText = ''
+    if (previousRow === currentRow) {
+      currentGuess = currentGuess.substring(0, currentGuess.length - 1)
+    } else {
+      currentGuess = currentGuess.substring(0, currentGuess.length)
+      previousRow++
+    }
+    letters[(ANSWER_LENGTH * currentRow) + currentGuess.length].innerText = ''
   }
 
   function markInvalidWord() {
