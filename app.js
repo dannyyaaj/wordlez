@@ -1,5 +1,6 @@
 const letters = document.querySelectorAll('.scoreboard-letter')
 const loadingDiv = document.querySelector('.info-bar')
+const keyboard = document.getElementById('keyboard-cont')
 const ANSWER_LENGTH = 5
 const MAX_ROUNDS = 6
 
@@ -36,6 +37,21 @@ async function start() {
       } else {
         // do nothing
       }
+    })
+
+    keyboard.addEventListener("click", (event) => {
+      const target = event.target
+
+      if (!target.classList.contains("keyboard-button")) {
+        return
+      }
+      let key = target.textContent
+
+      if (key === "Del") {
+        key = "Backspace"
+      }
+
+      document.dispatchEvent(new KeyboardEvent("keydown", { 'key': key }))
     })
   }
 
